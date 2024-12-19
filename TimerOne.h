@@ -37,7 +37,11 @@
 #define TIMERONE_h
 
 #include <avr/io.h>
+#ifdef ESP32
+#include <interrupt.h>
+#else
 #include <avr/interrupt.h>
+#endif  // ifdef ESP32
 
 #define RESOLUTION 65536    // Timer1 is 16 bit
 
